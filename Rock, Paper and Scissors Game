@@ -1,0 +1,57 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int main()
+{
+    // Seed the random number generator with the current time
+    srand(time(0));
+
+    // Generate a random number between 0 and 2
+    int randomNumber = (rand() % 3) + 0;
+    int player;
+    printf("For playing this game enter 0 for ROCK\n");
+    printf("Enter 1 for paper\n");
+    printf("Enter 2 for scissors\n");
+    printf("Enter ROCK/PAPER/SCISSOR : ");
+    scanf("%d", &player);
+    printf("System is chosen %d\n", randomNumber);
+
+    if (player == randomNumber)
+    {
+        printf("The Game is draw!!!\n");
+    }
+    if (player == 0 && randomNumber == 1)
+    {
+        printf("The Computer is WIN !!!\n");
+    }
+    if (player == 0 && randomNumber == 2)
+    {
+        printf("You are WIN !!!\n");
+    }
+    if (player == 1 && randomNumber == 0)
+    {
+        printf("You are WIN !!!\n");
+    }
+    if (player == 1 && randomNumber == 2)
+    {
+        printf("The Computer is WIN !!!\n");
+    }
+    if (player == 2 && randomNumber == 0)
+    {
+        printf("The Computer is WIN !!!\n");
+    }
+    if (player == 2 && randomNumber == 1)
+    {
+        printf("You are WIN !!!\n");
+    }
+    if (player > 2)
+    {
+        printf("Bro You are Becoming naughty\nwhy you entering value greater then 2\n");
+    }
+    if (player < 0)
+    {
+        printf("Bro Read the instruction!!! you cannot enter value below 0\n");
+    }
+
+    return 0;
+}
